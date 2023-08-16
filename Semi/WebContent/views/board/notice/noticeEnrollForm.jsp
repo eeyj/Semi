@@ -90,7 +90,7 @@
 
  	<div class="container">
         <div class="item notice">
-            <h2 class="master_notice_title mt-3">공지사항 관리</h2>
+            <h2 class="master_notice_title mt-3">공지사항 등록</h2>
             <form class="mt-3" action="<%= request.getContextPath() %>/insert.no" method="post">
 	            <input type="hidden" name="userNo" value="<%= loginUser.getUserNo()%>">
 	            <div>

@@ -101,7 +101,7 @@
 		<div class="titleArea">
 			<h4 class="title">전체 목록</h4>
 			<div class="sell_write_btn">
-				<a class="btn btn-outline-warning" href="">등록하기</a>
+				<a class="btn btn-outline-warning" href="<%=request.getContextPath()%>/insertSell">등록하기</a>
 			</div>
 		</div>
 		<div class="categoryArea">
