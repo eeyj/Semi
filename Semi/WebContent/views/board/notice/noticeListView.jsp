@@ -19,7 +19,7 @@
 .footer {
 	width: 100%;
 	height: 100px;
-	position: absolute;
+	/* position: absolute; */
 	bottom: 0;
 }
 
@@ -29,6 +29,7 @@
 	align-items: flex-start;
 	padding: 10px;
 	width: 900px;
+    margin-top: 20px;
 }
 
 .master_notice_title {
@@ -101,7 +102,7 @@
         
         <div class="item" style="width:1000px;">
 	        <div class="titleArea">
-	            <h2 class="master_notice_title">공지사항 관리</h2>
+	            <h2 class="master_notice_title">공지사항</h2>
 	            <div class="notice_write_btn">
 	                <a class="btn btn-outline-warning" href="<%=request.getContextPath()%>/insert.no">글작성</a>
 	            </div>

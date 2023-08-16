@@ -318,17 +318,17 @@ a:hover {
                                     <div class="countInfo">
                                         <div class="countMenu">
                                             <a href="">
-                                                <img class="chatImg" src="resources/chat-balloon.png">
+                                                <img class="chatImg" src="https://ifh.cc/g/Y7s3AX.png">
                                                 <div class="chatTitle">산책메이트</div>
                                                 <div class="chatCount">3</div>
                                             </a>
                                             <a href="">
-                                                <img class="likeImg" src="resources/chat-balloon.png">
-                                                <div class="likeTitle">좋아요</div>
+                                                <img class="likeImg" src="https://ifh.cc/g/T5gW0K.png">
+                                                <div class="likeTitle">채팅</div>
                                                 <div class="likeCount">3</div>
                                             </a>
                                             <a href="">
-                                                <img class="zzimImg" src="resources/chat-balloon.png">
+                                                <img class="zzimImg" src="https://ifh.cc/g/qVdfgG.png">
                                                 <div class="zzimTitle">찜목록</div>
                                                 <div class="zzimCount">3</div>
                                             </a>

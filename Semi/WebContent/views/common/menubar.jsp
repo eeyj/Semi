@@ -23,7 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<title>메뉴바</title>
+<title>또오개냥</title>
 <style>
 @font-face {
 	font-family: 'yg-jalnan';
@@ -225,7 +225,7 @@ a:hover {text-decoration: none;}
 			</div>
 			<div class="menuM">
 				<!-- 나눔&거래 -->
-				<a href="">
+				<a href="<%=contextPath%>/sellList">
 					<div class="Mm">
 						<div class="mImgWrap">
 							<img class="mImg" src="https://ifh.cc/g/V6mL1Y.png">
