@@ -1,5 +1,9 @@
+<%@ page import="java.util.ArrayList, com.kh.board.model.vo.Board, com.kh.common.model.vo.PageInfo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	ArrayList<Board> list = (ArrayList<Board>)request.getAttribute("list");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -121,68 +125,30 @@
 			</ul>
 		</div>
 		<div class="row row-cols-1 row-cols-md-5 g-4">
-			<div class="col">
-				<div class="card">
-					<img
-						src="https://shop-phinf.pstatic.net/20230802_250/1690947373303vaexm_JPEG/4413367585113612_1587980781.jpg?type=f296_296"
-						class="card-img-top">
-					<div class="card-body">
-						<h5 class="card-title">상품명</h5>
-						<p class="card-text">상품소개글</p>
-					</div>
+		
+			<% if(list.isEmpty()){ %>
+				<div class="noList">
+					<img src="https://ifh.cc/g/Dj92MS.png" width="40px" height="40px"
+						style="margin: 10px;">
+					<p>현재 조회된 상품이 없습니다.</p>
 				</div>
-			</div>
-			<div class="col">
-				<div class="card">
-					<img
-						src="https://shop-phinf.pstatic.net/20230802_250/1690947373303vaexm_JPEG/4413367585113612_1587980781.jpg?type=f296_296"
-						class="card-img-top">
-					<div class="card-body">
-						<h5 class="card-title">상품명</h5>
-						<p class="card-text">상품소개글</p>
+			<% } else { %>
+				<% for(Board b : list) { %>
+					<div class="col">
+						<div class="card">
+							<img src="https://shop-phinf.pstatic.net/20230802_250/1690947373303vaexm_JPEG/4413367585113612_1587980781.jpg?type=f296_296" class="card-img-top">
+							<div class="card-body">
+								<h5 class="card-title"><%= b.getBoardTitle() %></h5>
+								<p class="card-text"><%= b.getBoardWriter() %></p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card">
-					<img
-						src="https://shop-phinf.pstatic.net/20230802_250/1690947373303vaexm_JPEG/4413367585113612_1587980781.jpg?type=f296_296"
-						class="card-img-top">
-					<div class="card-body">
-						<h5 class="card-title">상품명</h5>
-						<p class="card-text">상품소개글</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card">
-					<img
-						src="https://shop-phinf.pstatic.net/20230802_250/1690947373303vaexm_JPEG/4413367585113612_1587980781.jpg?type=f296_296"
-						class="card-img-top">
-					<div class="card-body">
-						<h5 class="card-title">상품명</h5>
-						<p class="card-text">상품소개글</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card">
-					<img
-						src="https://shop-phinf.pstatic.net/20230802_250/1690947373303vaexm_JPEG/4413367585113612_1587980781.jpg?type=f296_296"
-						class="card-img-top">
-					<div class="card-body">
-						<h5 class="card-title">상품명</h5>
-						<p class="card-text">상품소개글</p>
-					</div>
-				</div>
-			</div>
+				<% } %>
+			<% } %>
+		
 		</div>
 
-		<div class="noList">
-			<img src="https://ifh.cc/g/Dj92MS.png" width="40px" height="40px"
-				style="margin: 10px;">
-			<p>현재 조회된 상품이 없습니다.</p>
-		</div>
+		
 
 	</div>
 

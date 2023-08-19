@@ -1,11 +1,16 @@
 package com.kh.board.sell.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.kh.board.model.vo.Board;
+import com.kh.board.sell.model.service.SellService;
 
 /**
  * Servlet implementation class SellListController
@@ -27,8 +32,9 @@ public class SellListController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setCharacterEncoding("UTF-8");
+		ArrayList<Board> list = new SellService().selectSellList();
 		
+		request.setAttribute("list", list);
 		request.getRequestDispatcher("views/board/sell/sellListView.jsp").forward(request, response);
 		
 	}
